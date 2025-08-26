@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://centscrap.local/schemas/preview.request.schema.json",
+  "title": "PreviewRequest",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "minLength": 1,
+      "description": "HTTP or HTTPS URL to fetch preview data from."
+    },
+    "raw_html": {
+      "type": "string",
+      "maxLength": 524288,
+      "description": "Optional raw HTML content to parse instead of fetching."
+    }
+  },
+  "required": ["url"]
+}
+
+
